@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="qx_fragment_main" type="id"></item>
+    <item name="qx_fragment_shopping" type="id"></item>
+    <item name="qx_fragment_car" type="id"></item>
+    <item name="qx_fragment_center" type="id"></item>
+</resources>

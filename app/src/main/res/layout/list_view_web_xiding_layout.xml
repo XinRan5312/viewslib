@@ -1,0 +1,57 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_view_root_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="4dip"
+    android:layout_weight="1"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/list_view_tile_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="我是第一个listView" />
+
+    <com.example.xinran.testjar.views.QxScrollView
+        android:id="@+id/list_view_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/list_view_linear_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/list_view_tile_first"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <com.xinran.viewslib.qxtabview.QxListView
+                android:id="@+id/list_view_first"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.xinran.viewslib.qxtabview.QxListView>
+
+            <TextView
+                android:id="@+id/list_view_tile_second"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="我是第二个listView" />
+
+            <WebView
+                android:id="@+id/list_view_second"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </WebView>
+
+        </LinearLayout>
+    </com.example.xinran.testjar.views.QxScrollView>
+</LinearLayout>
+

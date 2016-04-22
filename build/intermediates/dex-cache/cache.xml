@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/xinran/workspace/JM/QxViewsLib/app/build/intermediates/exploded-aar/QxViewsLib/viewslib/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5fc0272f7594280c072cc6c61deed1ae8223aeb6">
+        <dex dex="/Users/xinran/workspace/JM/QxViewsLib/app/build/intermediates/pre-dexed/debug/classes-2587ab780e8e1f52cca3cb328f99691627d6c545.jar" />
+    </item>
+
+</items>

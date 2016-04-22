@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="qx_fragment" type="id"></item>
+    <item name="tab_indicator" type="id"></item>
+</resources>

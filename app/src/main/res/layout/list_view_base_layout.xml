@@ -1,0 +1,28 @@
+<com.xinran.qxlistviewforjm.QxListViewContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_view_root_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="4dip"
+    android:layout_weight="1"
+    android:background="#00000000">
+    <ScrollView
+        android:id="@+id/list_view_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:id="@+id/list_view_linear_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.xinran.viewslib.qxtabview.QxListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.xinran.viewslib.qxtabview.QxListView>
+        </LinearLayout>
+    </ScrollView>
+
+</com.xinran.qxlistviewforjm.QxListViewContainer>
+
