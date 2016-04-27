@@ -26,11 +26,9 @@ public class QxScrollView extends QxBaseScrollView {
 
     @Override
     public void changeXiDingTile(LinearLayout container, int l, int t, int oldl, int oldt) {
-        TextView tv = (TextView) container.getChildAt(0);
-        TextView tv2 = (TextView) container.getChildAt(2);
-        tv2.setText("" + t + ";" + tv2.getTop());
+        TextView tv = (TextView)container.getChildAt(positionsTitle.get(0));
 
-        if (t - tv2.getTop() > reviseHeight) {
+        if (t - tv.getTop() > reviseHeight) {
             if (changeXiDing != null) {
                 changeXiDing.changeXiDingShow(2);
             }

@@ -1,0 +1,47 @@
+<com.xinran.qxviewslib.QxListViewContainerNoFooter xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_view_root_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="4dip"
+    android:layout_weight="1"
+    android:background="#00000000"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:id="@+id/list_view_tile_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <com.xinran.qxviewslib.QxScrollView
+        android:id="@+id/list_view_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/card_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/list_view_tile_first"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="我是listView Title" />
+
+                <LinearLayout
+                    android:id="@+id/container_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.xinran.viewslib.qxtabview.QxListView
+                        android:id="@+id/list_view_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </com.xinran.viewslib.qxtabview.QxListView>
+                </LinearLayout>
+            </LinearLayout>
+    </com.xinran.qxviewslib.QxScrollView>
+</com.xinran.qxviewslib.QxListViewContainerNoFooter>
+
