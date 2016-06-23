@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import com.xinran.qxviewslib.R;
+
 import java.util.ArrayList;
 
 /**
@@ -41,7 +43,7 @@ public class XuanfuMainAdapter extends BaseAdapter {
         ViewHolder holder;
         if (convertView==null) {
             holder=new ViewHolder();
-            convertView= LayoutInflater.from(context).inflate(R.layout.adapter_main, null, false);
+            convertView= LayoutInflater.from(context).inflate(R.layout.xuanfu_adapter_main, null, false);
             convertView.setTag(holder);
         }
         else {
