@@ -5,4 +5,7 @@
     <item name="qx_fragment_shopping" type="id"></item>
     <item name="qx_fragment_car" type="id"></item>
     <item name="qx_fragment_center" type="id"></item>
+    <item name="id_topview" type="id"></item>
+    <item name="id_indicatorview" type="id"></item>
+    <item name="id_bottomview" type="id"></item>
 </resources>
