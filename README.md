@@ -23,5 +23,7 @@ UI View  更具自己工作中遇到的问题慢慢积攒实现的如下的一�
 16/7/4:
     1：在TestSeekBarActivity中添加对SeekBar的使用
     2：使用父布局是background="@android:color/transparent"是透明，其子布局可以随意自定义自己的背景颜色
+    3：在MoveSonLayoutActivity中实现布局中加某个自布局可见时另外一个自布局网上或者往下移动的（或者消失时的）
+       动画效果
 
 
