@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_container"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@android:color/transparent">
+    <!--<SeekBar-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:maxHeight="5dp"-->
+    <!--android:minHeight="5dp"-->
+    <!--android:paddingLeft="18px"-->
+    <!--android:paddingRight="18px"-->
+    <!--android:max="100"-->
+    <!--android:progressDrawable="@drawable/seekbar_style"-->
+    <!--android:thumb="@drawable/icon_uc_press" />-->
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="number"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/lay_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/lay_one"
+        android:layout_below="@+id/tv_num"
+        android:layout_marginTop="40dp"
+        android:background="@color/color_1A000000"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="aalklaffffffffff" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:max="100"
+            android:maxHeight="5dp"
+            android:minHeight="5dp"
+            android:paddingLeft="18px"
+            android:paddingRight="18px"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/seekbar_thumb" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_one"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary">
+
+        <Button
+            android:id="@+id/btn_seekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Come2" />
+    </LinearLayout>
+
+
+</RelativeLayout>
