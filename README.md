@@ -26,4 +26,7 @@ UI View  更具自己工作中遇到的问题慢慢积攒实现的如下的一�
     3：在MoveSonLayoutActivity中实现布局中加某个自布局可见时另外一个自布局网上或者往下移动的（或者消失时的）
        动画效果
 
+16/7/5：
+    在TestScrollerActivity中练习Scrooler
+
 

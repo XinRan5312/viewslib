@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+<com.xinran.qxviewslib.customview.CustomScrollerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:orientation="horizontal">
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@android:color/holo_red_dark"
+        android:maxLines="1"
+        android:text="hello"
+        android:textSize="60sp"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:background="@android:color/holo_blue_bright"
+        android:maxLines="1"
+        android:text="world"
+        android:textSize="60sp"/>
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:background="@android:color/holo_green_dark"
+        android:maxLines="1"
+        android:text="byebye"
+        android:textSize="60sp"/>
+
+</com.xinran.qxviewslib.customview.CustomScrollerView>
+
+</LinearLayout>
