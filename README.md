@@ -29,4 +29,7 @@ UI View  更具自己工作中遇到的问题慢慢积攒实现的如下的一�
 16/7/5：
     在TestScrollerActivity中练习Scrooler
 
+16/7/6：
+        在TestLightTextViewActivity加入可以发光的字
+
 
