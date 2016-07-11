@@ -3,8 +3,11 @@ package com.xinran.qxviewslib;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
@@ -26,7 +29,8 @@ public class TestSeekBarActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         relativeLayout = (RelativeLayout) findViewById(R.id.view_container);
-        layoutOne = (LinearLayout) findViewById(R.id.lay_one);
+        SharedPreferences sharedPreferences=this.getSharedPreferences("name",0);
+        Log.e("QX",sharedPreferences.getString("qx","qx"));
         layout2 = (LinearLayout) findViewById(R.id.lay_two);
         num = (TextView) findViewById(R.id.tv_num);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
@@ -46,7 +50,12 @@ public class TestSeekBarActivity extends Activity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                num.setVisibility(View.GONE);
+               num.setVisibility(View.INVISIBLE);
+                SharedPreferences sharedPreferences=TestSeekBarActivity.this.getSharedPreferences("name", 0);
+                SharedPreferences.Editor editor=sharedPreferences.edit();
+                editor.putString("qx","love");
+
+                editor.commit();
             }
         });
         float ll = layout2.getLayoutParams().height;
@@ -54,32 +63,33 @@ public class TestSeekBarActivity extends Activity {
         final ObjectAnimator in = ObjectAnimator.ofFloat(layout2, "translationY", 0f, ll);
         out.setDuration(200);
         in.setDuration(200);
-        findViewById(R.id.btn_seekbar).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AnimatorSet intoAdjustModeAnimatorSet = new AnimatorSet();
-                if (b) {
-
-                    b = false;
-                    intoAdjustModeAnimatorSet.play(out);
-                    layout2.setVisibility(View.VISIBLE);
-                    num.setVisibility(View.VISIBLE);
-//                    int h = relativeLayout.getLayoutParams().height;
+//        layoutOne = (LinearLayout) findViewById(R.id.lay_one);
+//        findViewById(R.id.btn_seekbar).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                AnimatorSet intoAdjustModeAnimatorSet = new AnimatorSet();
+//                if (b) {
 //
-//                    relativeLayout.getLayoutParams().height = h + h * 2;
-                } else {
-//                    int h = relativeLayout.getLayoutParams().height;
+//                    b = false;
+//                    intoAdjustModeAnimatorSet.play(out);
+//                    layout2.setVisibility(View.VISIBLE);
+//                    num.setVisibility(View.VISIBLE);
+////                    int h = relativeLayout.getLayoutParams().height;
+////
+////                    relativeLayout.getLayoutParams().height = h + h * 2;
+//                } else {
+////                    int h = relativeLayout.getLayoutParams().height;
+////
+////                    relativeLayout.getLayoutParams().height = h - h * 2/3;
+//                    b = true;
+//                    intoAdjustModeAnimatorSet.play(in);
+//                    layout2.setVisibility(View.GONE);
+//                    num.setVisibility(View.GONE);
+//                }
+//                intoAdjustModeAnimatorSet.start();
 //
-//                    relativeLayout.getLayoutParams().height = h - h * 2/3;
-                    b = true;
-                    intoAdjustModeAnimatorSet.play(in);
-                    layout2.setVisibility(View.GONE);
-                    num.setVisibility(View.GONE);
-                }
-                intoAdjustModeAnimatorSet.start();
-
-
-            }
-        });
+//
+//            }
+//        });
     }
 }

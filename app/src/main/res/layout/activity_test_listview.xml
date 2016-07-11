@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/edit_photo_filter_manage_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_photo_filter_manage_longpress_hint"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_below="@+id/edit_photo_filter_manage_titlebar"
+        android:background="#f2f2f2">
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/edit_photo_filter_manage_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#ffffff"
+        android:divider="#eeeeee"
+        android:dividerHeight="2dp"
+        android:layout_below="@+id/edit_photo_filter_manage_longpress_hint"
+        android:longClickable="true">
+
+    </ListView>
+
+    <ImageView
+        android:id="@+id/bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+</RelativeLayout>
+
