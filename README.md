@@ -7,6 +7,7 @@ UI View  更具自己工作中遇到的问题慢慢积攒实现的如下的一�
 
 16/6/07：
     添加了利用RecylerView实现弹幕的功能，在项目的tanmu的包中
+    recylerView.scrollToPosition(position)滚动到指定item
 
 16/6/21：
     新添加：悬浮导航栏StickyNavLayout的实现--基本滑动的实现 来自：http://www.jianshu.com/p/e5ef7e36cbd3
@@ -31,5 +32,12 @@ UI View  更具自己工作中遇到的问题慢慢积攒实现的如下的一�
 
 16/7/6：
         在TestLightTextViewActivity加入可以发光的字
+
+16/7/14：
+        在draglistview包中分别用两种方式实现了可以随意拖拽的ListView
+    其中：
+       1：DragListViewActivity实现了点击item的某个位置可以拖拽，但是长按item不可拖拽
+       2：LongPressDragListViewActivity实现了长按item可以拖拽，但是Adapter要是ArrayAdapter的子类
+       两者互不真正实现了ListView 的可拖拽操作
 
 

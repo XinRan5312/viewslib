@@ -14,7 +14,7 @@
         android:name=".QxApp"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".TestLightTextViewActivity"
+            android:name="com.xinran.qxviewslib.draglistview.longpressdrag.LongPressDragListViewActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

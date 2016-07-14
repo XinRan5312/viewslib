@@ -1,6 +1,7 @@
 package com.xinran.qxviewslib.draglistview.longpressdrag;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -20,9 +21,13 @@ import android.widget.TextView;
 import com.xinran.qxviewslib.BaseActivity;
 import com.xinran.qxviewslib.R;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.xinran.qxviewslib.TestSerilizal;
 import com.xinran.qxviewslib.draglistview.longpressdrag.DragUITools.OnDragListener;
 
 /**
@@ -58,7 +63,12 @@ public class LongPressDragListViewActivity extends BaseActivity {
         list = (ListView) findViewById(R.id.edit_photo_filter_manage_list_view);
         bar = (ImageView) findViewById(R.id.bar);
         bar.setDrawingCacheEnabled(true);
-
+        putObject("obj", new TestSerilizal(this));
+        List<String> list2=new ArrayList<>();
+        for(int i=0;i<18;i++){
+            if(i/2==0)
+            list2.add(i+5,"lllll");
+        }
         dragOnTouchListener = DragUITools.setOnDragListener(list, new OnDragListener() {
             int lastPos = -1;
 
@@ -101,7 +111,10 @@ public class LongPressDragListViewActivity extends BaseActivity {
                         Log.i(TAG, "要移动的位置=" + dragPosition + " 目标位置:" + lastDropPosition);
                         String dataToRemove = data.remove(dragPosition);
                         data.add(lastDropPosition, dataToRemove);
-                        ((ArrayAdapter) list.getAdapter()).notifyDataSetChanged();
+                        ArrayAdapter adpa = ((ArrayAdapter) list.getAdapter());
+                        adpa.remove(dataToRemove);
+                        adpa.insert(dataToRemove, lastDropPosition);
+                        adpa.notifyDataSetChanged();
                     }
                     //恢复
                     dragPosition = -1;
@@ -116,9 +129,12 @@ public class LongPressDragListViewActivity extends BaseActivity {
         for (int i = 0; i < 50; i++) {
             data.add("呵呵" + i);
         }
-        list.setAdapter(new ArrayAdapter<String>(this, R.layout.listiem, data));
 
-
+        MyListViewAdapter adap = new MyListViewAdapter(this, R.layout.drag_list_view_item);
+        for (int i = 0; i < 50; i++) {
+            adap.add("呵呵" + i);
+        }
+        list.setAdapter(adap);
         //长按ListView开始拖动
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
@@ -167,38 +183,89 @@ public class LongPressDragListViewActivity extends BaseActivity {
             list.smoothScrollBy(distance, 300);
         }
     }
-    private class MyListViewAdapter extends BaseAdapter {
+
+    private class MyListViewAdapter extends ArrayAdapter<String> {
 
         private LayoutInflater li;
-
-        public MyListViewAdapter(Context context) {
+        private int mResourceId;
+        public MyListViewAdapter(Context context, int layid,List<String> list) {
+            super(context, layid);
             li = LayoutInflater.from(context);
+            this.mResourceId = layid;
+            for(String item:list){
+                add(item);
+            }
+        }
+        public MyListViewAdapter(Context context, int layid) {
+            super(context, layid);
+            li = LayoutInflater.from(context);
+            this.mResourceId = layid;
         }
 
-        @Override
-        public int getCount() {
-            return data.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return data.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            View view = li.inflate(R.layout.drag_list_view_item, null);
+//            View view = li.inflate(R.layout.drag_list_view_item, null);
+            String item = getItem(position);
+            View view = li.inflate(mResourceId, null);
             TextView tv = (TextView) view.findViewById(R.id.edit_photo_filter_manage_filtername);
             tv.setGravity(Gravity.CENTER);
-            tv.setText(data.get(position));
-            tv.setTextSize(30);
+            tv.setText(item);
             return view;
         }
 
     }
+
+    /**
+     * desc:保存对象
+     * add by:qixinh on 16/7/12.
+     *
+     * @param key
+     * @param obj 要保存的对象，只能保存实现了serializable的对象
+     *            modified:
+     */
+    public void putObject(String key, Object obj) {
+        try {
+            //先将序列化结果写到byte缓存中，其实就分配一个内存空间
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ObjectOutputStream os = new ObjectOutputStream(bos);
+            //将对象序列化写入byte缓存
+            os.writeObject(obj);
+            //将序列化的数据转为16进制保存
+            String bytesToHexString = bytesToHexString(bos.toByteArray());
+            //保存该16进制数组
+
+            SharedPreferences sp = this.getPreferences(0);
+            SharedPreferences.Editor mEdit1 = sp.edit();
+            mEdit1.putString(key, bytesToHexString);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * desc:将数组转为16进制
+     * add by:qixinh on 16/7/12.
+     *
+     * @param bArray
+     * @return modified:
+     */
+    private String bytesToHexString(byte[] bArray) {
+        if (bArray == null) {
+            return null;
+        }
+        if (bArray.length == 0) {
+            return "";
+        }
+        StringBuffer sb = new StringBuffer(bArray.length);
+        String sTemp;
+        for (int i = 0; i < bArray.length; i++) {
+            sTemp = Integer.toHexString(0xFF & bArray[i]);
+            if (sTemp.length() < 2)
+                sb.append(0);
+            sb.append(sTemp.toUpperCase());
+        }
+        return sb.toString();
+    }
+
 }
