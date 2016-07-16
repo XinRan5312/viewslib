@@ -11,12 +11,16 @@
         android:background="#ffffff">
 
     </RelativeLayout>
-
+    <TextView
+        android:id="@+id/tv_desnity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/edit_photo_filter_manage_titlebar"/>
     <RelativeLayout
         android:id="@+id/edit_photo_filter_manage_longpress_hint"
         android:layout_width="match_parent"
         android:layout_height="26dp"
-        android:layout_below="@+id/edit_photo_filter_manage_titlebar"
+        android:layout_below="@+id/tv_desnity"
         android:background="#f2f2f2">
 
     </RelativeLayout>

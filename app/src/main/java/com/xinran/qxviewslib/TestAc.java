@@ -2,6 +2,7 @@ package com.xinran.qxviewslib;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -20,6 +21,7 @@ import java.util.List;
  */
 public class TestAc extends BaseActivity{
     ListView listView;
+    TextView textView;
     private List<String> array = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class TestAc extends BaseActivity{
         for(int i=1;i<12;i++){
             array.add(""+i);
         }
+        textView=$(R.id.tv_desnity);
         listView.setAdapter(new MyListViewAdapter(this));
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -37,7 +40,18 @@ public class TestAc extends BaseActivity{
                 return true;
             }
         });
+
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+        String str= "Density is " + displayMetrics.density + " densityDpi is " + displayMetrics.densityDpi + " height: " + displayMetrics.heightPixels +
+                " width: " + displayMetrics.widthPixels;
+        textView.setText(str);
+    }
+
     private class MyListViewAdapter extends BaseAdapter {
 
         private LayoutInflater li;

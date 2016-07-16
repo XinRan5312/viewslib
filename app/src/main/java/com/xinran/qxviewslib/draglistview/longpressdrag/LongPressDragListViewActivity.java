@@ -63,12 +63,6 @@ public class LongPressDragListViewActivity extends BaseActivity {
         list = (ListView) findViewById(R.id.edit_photo_filter_manage_list_view);
         bar = (ImageView) findViewById(R.id.bar);
         bar.setDrawingCacheEnabled(true);
-        putObject("obj", new TestSerilizal(this));
-        List<String> list2=new ArrayList<>();
-        for(int i=0;i<18;i++){
-            if(i/2==0)
-            list2.add(i+5,"lllll");
-        }
         dragOnTouchListener = DragUITools.setOnDragListener(list, new OnDragListener() {
             int lastPos = -1;
 
