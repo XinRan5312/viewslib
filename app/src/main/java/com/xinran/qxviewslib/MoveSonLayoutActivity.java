@@ -15,7 +15,9 @@ public class MoveSonLayoutActivity extends BaseActivity {
     LinearLayout layTop;
     Button btn;
     TextView tv;
-    boolean flag=false;
+    boolean flag = false;
+    LinearLayout moveCon;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,13 +26,14 @@ public class MoveSonLayoutActivity extends BaseActivity {
     }
 
     private void initViews() {
-        layTop=$(R.id.lay_top_move);
-        btn=$(R.id.btn_top_move);
-        tv=$(R.id.tv_move_bottom);
-        final ObjectAnimator layAnimator=ObjectAnimator.ofFloat(layTop,"translationY",-300).setDuration(1000);//上移300
-        final ObjectAnimator tvAnimator=ObjectAnimator.ofFloat(tv,"translationY",btn.getBottom()+300,btn.getBottom()).setDuration(1000);
-        final ObjectAnimator layAnimator2=ObjectAnimator.ofFloat(layTop,"translationY",0).setDuration(1000);//哪来的回哪儿去
-        final ObjectAnimator tvAnimator2=ObjectAnimator.ofFloat(tv,"translationY",300).setDuration(1000);//往下移动300
+        layTop = $(R.id.lay_top_move);
+        btn = $(R.id.btn_top_move);
+        tv = $(R.id.tv_move_bottom);
+        moveCon = $(R.id.move_img_container);
+        final ObjectAnimator layAnimator = ObjectAnimator.ofFloat(layTop, "translationY", -300).setDuration(1000);//上移300
+        final ObjectAnimator tvAnimator = ObjectAnimator.ofFloat(tv, "translationY", btn.getBottom() + 300, btn.getBottom()).setDuration(1000);
+        final ObjectAnimator layAnimator2 = ObjectAnimator.ofFloat(layTop, "translationY", 0).setDuration(1000);//哪来的回哪儿去
+        final ObjectAnimator tvAnimator2 = ObjectAnimator.ofFloat(tv, "translationY", 300).setDuration(1000);//往下移动300
         tvAnimator2.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
@@ -52,18 +55,18 @@ public class MoveSonLayoutActivity extends BaseActivity {
 
             }
         });
+        moveCon.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+        final ObjectAnimator ani = ObjectAnimator.ofFloat(moveCon, "translationY", -200).setDuration(1000);
+        final ObjectAnimator ano = ObjectAnimator.ofFloat(moveCon, "translationY", 0).setDuration(1000);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!flag){
-                    layAnimator.start();
-                    tvAnimator.start();
-                    tv.setVisibility(View.VISIBLE);
-                    flag=true;
-                }else{
-                    layAnimator2.start();
-                    tvAnimator2.start();
-                    flag=false;
+                if (!flag) {
+                    ani.start();
+                    flag = true;
+                } else {
+                    ano.start();
+                    flag = false;
                 }
 
             }

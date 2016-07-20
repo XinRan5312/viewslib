@@ -8,4 +8,5 @@
     <item name="id_topview" type="id"></item>
     <item name="id_indicatorview" type="id"></item>
     <item name="id_bottomview" type="id"></item>
+    <item name="jazzy_key" type="id"/>
 </resources>
