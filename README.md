@@ -142,4 +142,5 @@ UI View  更具自己工作中遇到的问题慢慢积攒实现的如下的一�
        2：LongPressDragListViewActivity实现了长按item可以拖拽，但是Adapter要是ArrayAdapter的子类
        两者互不真正实现了ListView 的可拖拽操作
 
-
+16/7/21：
+     TestAlDLActivity这个activity所在的包及其相关类实现了AndroidStudio中AIDL的使用，以及Socket连接实现心跳

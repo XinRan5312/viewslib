@@ -2,25 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
+        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/viewslib/viewslib/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="debf30ce0a7560396b6235edef77e447006454c2">
-        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-157a2ae67a35e72b7e403d3ed57b045bab7a69e3.jar" />
-    </item>
-    <item
-        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
-        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-af70a79070152f313b9fbfaf7a39007a30c389d2.jar" />
-    </item>
-    <item
-        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-82db510c0241c6e94744ef92476d7f16e346bbba.jar" />
+        sha1="59c513877c01d5e8d1fda2d17ebc418ad87e1006">
+        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-e96b6105c952c8a1b244675c33c81979835c02d0.jar" />
     </item>
     <item
         jar="/Users/xinran/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
@@ -30,25 +16,25 @@
         <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/library-2.4.0-2723d90e7bdd68cd52a094509e8c5ae8ae49024a.jar" />
     </item>
     <item
-        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/viewslib/viewslib/unspecified/jars/classes.jar"
+        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="234fb9194b26cf2d8e547645a32ac50ed5be7654">
-        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-e96b6105c952c8a1b244675c33c81979835c02d0.jar" />
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-af70a79070152f313b9fbfaf7a39007a30c389d2.jar" />
     </item>
     <item
-        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/23.4.0/jars/classes.jar"
+        jar="/Users/xinran/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="7c4c1fcc34aca536e3389c31527fb3c941b80266">
-        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-211e658dd3f19c2ae9d6742b1465b38959ec47a5.jar" />
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/glide-3.7.0-a8b3185a786392b10de852bc08ab00153c9cfbcd.jar" />
     </item>
     <item
-        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
+        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
-        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-07353d5bb17184f4304bd07ada4687d215aed8e3.jar" />
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-82db510c0241c6e94744ef92476d7f16e346bbba.jar" />
     </item>
     <item
         jar="/Users/xinran/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
@@ -65,18 +51,11 @@
         <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0-22560679f510595dbba7d9faeaebb4c2872e449e.jar" />
     </item>
     <item
-        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
+        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/23.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="292a9fa091757208efa65e77eef63088247e51f3">
-        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-eba3d818030514aeca02e271043650b07b8eaff1.jar" />
-    </item>
-    <item
-        jar="/Users/xinran/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/glide-3.7.0-a8b3185a786392b10de852bc08ab00153c9cfbcd.jar" />
+        sha1="7c4c1fcc34aca536e3389c31527fb3c941b80266">
+        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-211e658dd3f19c2ae9d6742b1465b38959ec47a5.jar" />
     </item>
     <item
         jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
@@ -84,6 +63,27 @@
         revision="23.0.2"
         sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
         <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0-452b76dcdf3352de09b16a9befdfd8b494587511.jar" />
+    </item>
+    <item
+        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
+        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-07353d5bb17184f4304bd07ada4687d215aed8e3.jar" />
+    </item>
+    <item
+        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-157a2ae67a35e72b7e403d3ed57b045bab7a69e3.jar" />
+    </item>
+    <item
+        jar="/Users/xinran/mygithub/viewslib/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="292a9fa091757208efa65e77eef63088247e51f3">
+        <dex dex="/Users/xinran/mygithub/viewslib/app/build/intermediates/pre-dexed/debug/classes-eba3d818030514aeca02e271043650b07b8eaff1.jar" />
     </item>
 
 </items>
