@@ -144,3 +144,7 @@ UI View  更具自己工作中遇到的问题慢慢积攒实现的如下的一�
 
 16/7/21：
      TestAlDLActivity这个activity所在的包及其相关类实现了AndroidStudio中AIDL的使用，以及Socket连接实现心跳
+
+17/03/14 ：
+   RxJava和Rxbus的简单使用
+   OK3和Fastjson的结合使用：http://blog.csdn.net/watertekhqx/article/details/62042768
